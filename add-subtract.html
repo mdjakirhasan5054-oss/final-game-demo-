@@ -1,0 +1,19 @@
+
+<h2>Add-Subtract Game ➕➖</h2>
+<p>উদাহরণ: 5 + 3 = ?</p>
+<input type="number" id="userAnswer" placeholder="আপনার উত্তর দিন">
+<button onclick="checkAddSub()">Submit</button>
+<p id="result"></p>
+
+<script>
+function checkAddSub() {
+    const answer = parseInt(document.getElementById('userAnswer').value);
+    const result = document.getElementById('result');
+    if(answer === 8) {
+        result.innerText = "সঠিক! 🎉 (+10 পয়েন্ট)";
+        addPoints(10);
+    } else {
+        result.innerText = "ভুল! ❌";
+    }
+}
+</script>

@@ -1,0 +1,15 @@
+
+<h2>Spin Game 🎡</h2>
+<button id="spinButton">ঘূর্ণন করুন</button>
+<p id="result"></p>
+
+<script src="js/config.js"></script>
+<script>
+document.getElementById('spinButton').onclick = function() {
+    const pointsArray = [10, 20, 50, 100, 200, 500];
+    const randomIndex = Math.floor(Math.random() * pointsArray.length);
+    const point = pointsArray[randomIndex];
+    document.getElementById('result').innerText = "আপনি পেলেন: " + point + " পয়েন্ট 🎉";
+    addPoints(point); // central balance update
+}
+</script>

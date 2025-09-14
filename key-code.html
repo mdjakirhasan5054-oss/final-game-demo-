@@ -1,0 +1,24 @@
+
+<h2>Key Code Game</h2>
+<input type="text" id="userCode" placeholder="আপনার কোড দিন">
+<button onclick="checkKeyCode()">Submit</button>
+<p id="result"></p>
+
+<script src="js/config.js"></script>
+<script>
+function checkKeyCode() {
+    const userCode = document.getElementById('userCode').value;
+    const result = document.getElementById('result');
+    
+    if(userCode == telegramControl.todayKeyCode) {
+        result.innerText = "সঠিক! 🎉 (ডেমো, পয়েন্ট থাকবে না)";
+    } else {
+        result.innerText = "ভুল! ❌";
+    }
+}
+</script>
+
+<div id="balance" style="position:fixed; top:10px; right:10px; font-size:18px; background:#f0f0f0; padding:5px 10px; border-radius:5px; z-index:1000;">
+Balance: USDT0
+</div>
+<script src="js/main.js"></script>

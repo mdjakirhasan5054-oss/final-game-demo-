@@ -1,0 +1,29 @@
+
+<h2>Ball Color Game</h2>
+<select id="colorChoice">
+  <option value="লাল">লাল</option>
+  <option value="নীল">নীল</option>
+  <option value="সবুজ">সবুজ</option>
+  <option value="কালো">কালো</option>
+</select>
+<button onclick="checkBallColor()">Submit</button>
+<p id="result"></p>
+
+<script src="js/config.js"></script>
+<script>
+function checkBallColor() {
+    const color = document.getElementById('colorChoice').value;
+    const result = document.getElementById('result');
+    
+    if(color == telegramControl.todayBallColor) {
+        result.innerText = "সঠিক! 🎉 (ডেমো)";
+    } else {
+        result.innerText = "ভুল! ❌";
+    }
+}
+</script>
+
+<div id="balance" style="position:fixed; top:10px; right:10px; font-size:18px; background:#f0f0f0; padding:5px 10px; border-radius:5px; z-index:1000;">
+Balance: USDT0
+</div>
+<script src="js/main.js"></script>

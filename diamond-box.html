@@ -1,0 +1,14 @@
+
+<h2>Diamond Box 💎</h2>
+<button id="diamondButton">ডায়মন্ড খুলুন</button>
+<p id="result"></p>
+
+<script>
+document.getElementById('diamondButton').onclick = function() {
+    const pointsArray = [5, 10, 20, 50, 100];
+    const randomIndex = Math.floor(Math.random() * pointsArray.length);
+    const point = pointsArray[randomIndex];
+    document.getElementById('result').innerText = "আপনি পেলেন: " + point + " পয়েন্ট 💎";
+    addPoints(point);
+}
+</script>
